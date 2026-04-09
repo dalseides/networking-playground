@@ -1,0 +1,12 @@
+[Unit]
+Description=Set up namespace networks
+After=network.target
+
+[Service]
+ExecStart=/root/net-setup.sh > /var/log/net-setup.log 2>&1
+User=root
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
