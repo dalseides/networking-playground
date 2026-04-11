@@ -1,0 +1,5 @@
+mylittleuser ALL = (ALL) NOPASSWD: \
+  /usr/bin/ip netns exec vpn sudo -u $USER *, \
+  /usr/bin/mount -t cgroup2 cgroup2 /sys/fs/cgroup, \
+  /usr/bin/mount -t securityfs securityfs /sys/kernel/security/
+
